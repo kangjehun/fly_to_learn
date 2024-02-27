@@ -1,7 +1,7 @@
 #include <iostream>
 
 // Function declaration for factorial calculation
-unsigned long long factorial(unsigned int n);
+unsigned long long manual_factorial(unsigned int n);
 
 int main() {
     // Hello, World! message
@@ -19,7 +19,7 @@ int main() {
 }
 
 // Function definition for factorial
-unsigned long long factorial(unsigned int n) {
+unsigned long long manual_factorial(unsigned int n) {
     if (n == 0)
         return 1; // Base case
     else
