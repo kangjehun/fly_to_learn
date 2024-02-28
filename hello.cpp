@@ -1,14 +1,13 @@
 #include <iostream>
 
-// Function declarations
-void printHelloWorld();
+// Function declaration for factorial calculation
 unsigned long long factorial(unsigned int n);
 
 int main() {
-    // Call the function to print "Hello, World!"
-    printHelloWorld();
+    // Hello, World! message
+    std::cout << "Hello, World!" << std::endl;
 
-    // Factorial calculation part
+    // Factorial calculation
     unsigned int number;
     std::cout << "Enter a positive integer to calculate its factorial: ";
     std::cin >> number;
@@ -19,11 +18,6 @@ int main() {
     return 0;
 }
 
-// Function to print "Hello, World!"
-void printHelloWorld() {
-    std::cout << "Hello, World!" << std::endl;
-}
-
 // Function definition for factorial
 unsigned long long factorial(unsigned int n) {
     if (n == 0)
@@ -31,4 +25,5 @@ unsigned long long factorial(unsigned int n) {
     else
         return n * factorial(n - 1); // Recursive case
 }
+
 
