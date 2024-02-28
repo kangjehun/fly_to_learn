@@ -5,7 +5,7 @@ unsigned long long factorial(unsigned int n);
 
 int main() {
     // Hello, World! message
-    std::cout << "Goodbye, World!" << std::endl;
+    std::cout << "Hello, World!" << std::endl;
 
     // Factorial calculation
     unsigned int number;
