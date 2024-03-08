@@ -1,0 +1,5 @@
+if(EXISTS "/home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/nn_models/sequential/test_nn_models_sequential_d_input_benchmark[1]_tests.cmake")
+  include("/home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/nn_models/sequential/test_nn_models_sequential_d_input_benchmark[1]_tests.cmake")
+else()
+  add_test(test_nn_models_sequential_d_input_benchmark_NOT_BUILT test_nn_models_sequential_d_input_benchmark_NOT_BUILT)
+endif()

@@ -1,0 +1,5 @@
+add_test( RL_TOOLS_TENSOR_TEST.SHAPE_OPERATIONS /home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/container/tensor_test [==[--gtest_filter=RL_TOOLS_TENSOR_TEST.SHAPE_OPERATIONS]==] --gtest_also_run_disabled_tests)
+set_tests_properties( RL_TOOLS_TENSOR_TEST.SHAPE_OPERATIONS PROPERTIES WORKING_DIRECTORY /home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/container)
+add_test( RL_TOOLS_TENSOR_TEST.TENSOR /home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/container/tensor_test [==[--gtest_filter=RL_TOOLS_TENSOR_TEST.TENSOR]==] --gtest_also_run_disabled_tests)
+set_tests_properties( RL_TOOLS_TENSOR_TEST.TENSOR PROPERTIES WORKING_DIRECTORY /home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/container)
+set( tensor_test_TESTS RL_TOOLS_TENSOR_TEST.SHAPE_OPERATIONS RL_TOOLS_TENSOR_TEST.TENSOR)

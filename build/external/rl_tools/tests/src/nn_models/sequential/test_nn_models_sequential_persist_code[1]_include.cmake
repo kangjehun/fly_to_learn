@@ -1,0 +1,5 @@
+if(EXISTS "/home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/nn_models/sequential/test_nn_models_sequential_persist_code[1]_tests.cmake")
+  include("/home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/nn_models/sequential/test_nn_models_sequential_persist_code[1]_tests.cmake")
+else()
+  add_test(test_nn_models_sequential_persist_code_NOT_BUILT test_nn_models_sequential_persist_code_NOT_BUILT)
+endif()

@@ -1,0 +1,5 @@
+add_test( RL_TOOLS_NN_LAYERS_DENSE.COPY_REGRESSION /home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/nn/layers/test_nn_layers_dense [==[--gtest_filter=RL_TOOLS_NN_LAYERS_DENSE.COPY_REGRESSION]==] --gtest_also_run_disabled_tests)
+set_tests_properties( RL_TOOLS_NN_LAYERS_DENSE.COPY_REGRESSION PROPERTIES WORKING_DIRECTORY /home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/nn/layers)
+add_test( RL_TOOLS_NN_LAYERS_DENSE.COPY_TIMING /home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/nn/layers/test_nn_layers_dense [==[--gtest_filter=RL_TOOLS_NN_LAYERS_DENSE.COPY_TIMING]==] --gtest_also_run_disabled_tests)
+set_tests_properties( RL_TOOLS_NN_LAYERS_DENSE.COPY_TIMING PROPERTIES WORKING_DIRECTORY /home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/nn/layers)
+set( test_nn_layers_dense_TESTS RL_TOOLS_NN_LAYERS_DENSE.COPY_REGRESSION RL_TOOLS_NN_LAYERS_DENSE.COPY_TIMING)

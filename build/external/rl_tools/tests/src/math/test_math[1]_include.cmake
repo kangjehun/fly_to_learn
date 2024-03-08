@@ -1,0 +1,5 @@
+if(EXISTS "/home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/math/test_math[1]_tests.cmake")
+  include("/home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/math/test_math[1]_tests.cmake")
+else()
+  add_test(test_math_NOT_BUILT test_math_NOT_BUILT)
+endif()

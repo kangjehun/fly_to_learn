@@ -14,6 +14,44 @@
 # EXTERNAL cache entries
 ########################
 
+//Builds the googlemock subproject
+BUILD_GMOCK:BOOL=OFF
+
+//Build test
+BUILD_TEST:BOOL=OFF
+
+//Build the testing tree.
+BUILD_TESTING:BOOL=ON
+
+//Path to a program.
+BZRCOMMAND:FILEPATH=/usr/bin/bzr
+
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0
+
+Boost_FILESYSTEM_LIBRARY_RELEASE:STRING=/usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=/usr/include
+
+//Boost library directory DEBUG
+Boost_LIBRARY_DIR_DEBUG:PATH=/usr/lib/x86_64-linux-gnu
+
+//Boost library directory RELEASE
+Boost_LIBRARY_DIR_RELEASE:PATH=/usr/lib/x86_64-linux-gnu
+
+//Boost serialization library (debug)
+Boost_SERIALIZATION_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_serialization.so
+
+//Boost serialization library (release)
+Boost_SERIALIZATION_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_serialization.so
+
+//Boost system library (debug)
+Boost_SYSTEM_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_system.so
+
+//Boost system library (release)
+Boost_SYSTEM_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_system.so
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
@@ -93,8 +131,56 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Enable/Disable output of compile commands during generation.
 CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE
 
+//User executables (bin)
+CMAKE_INSTALL_BINDIR:PATH=bin
+
+//Read-only architecture-independent data (DATAROOTDIR)
+CMAKE_INSTALL_DATADIR:PATH=
+
+//Read-only architecture-independent data root (share)
+CMAKE_INSTALL_DATAROOTDIR:PATH=share
+
+//Documentation root (DATAROOTDIR/doc/PROJECT_NAME)
+CMAKE_INSTALL_DOCDIR:PATH=
+
+//C header files (include)
+CMAKE_INSTALL_INCLUDEDIR:PATH=include
+
+//Info documentation (DATAROOTDIR/info)
+CMAKE_INSTALL_INFODIR:PATH=
+
+//Object code libraries (lib)
+CMAKE_INSTALL_LIBDIR:PATH=lib
+
+//Program executables (libexec)
+CMAKE_INSTALL_LIBEXECDIR:PATH=libexec
+
+//Locale-dependent data (DATAROOTDIR/locale)
+CMAKE_INSTALL_LOCALEDIR:PATH=
+
+//Modifiable single-machine data (var)
+CMAKE_INSTALL_LOCALSTATEDIR:PATH=var
+
+//Man documentation (DATAROOTDIR/man)
+CMAKE_INSTALL_MANDIR:PATH=
+
+//C header files for non-gcc (/usr/include)
+CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
+
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=/usr/local
+
+//Run-time variable data (LOCALSTATEDIR/run)
+CMAKE_INSTALL_RUNSTATEDIR:PATH=
+
+//System admin executables (sbin)
+CMAKE_INSTALL_SBINDIR:PATH=sbin
+
+//Modifiable architecture-independent data (com)
+CMAKE_INSTALL_SHAREDSTATEDIR:PATH=com
+
+//Read-only single-machine data (etc)
+CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=/usr/bin/ld
@@ -139,6 +225,21 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
 CMAKE_PROJECT_NAME:STATIC=fly_to_learn
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION:STATIC=0.1
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MINOR:STATIC=1
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_PATCH:STATIC=
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_TWEAK:STATIC=
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -202,6 +303,65 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Path to the coverage program that CTest uses for performing coverage
+// inspection
+COVERAGE_COMMAND:FILEPATH=/usr/bin/gcov
+
+//Extra command line flags to pass to the coverage tool
+COVERAGE_EXTRA_FLAGS:STRING=-l
+
+//How many times to retry timed-out CTest submissions.
+CTEST_SUBMIT_RETRY_COUNT:STRING=3
+
+//How long to wait between timed-out CTest submissions.
+CTEST_SUBMIT_RETRY_DELAY:STRING=5
+
+//Path to a program.
+CVSCOMMAND:FILEPATH=CVSCOMMAND-NOTFOUND
+
+//Options passed to the cvs update command.
+CVS_UPDATE_OPTIONS:STRING=-d -A -P
+
+//Maximum time allowed before CTest will kill the test.
+DART_TESTING_TIMEOUT:STRING=1500
+
+//Dot tool for use with Doxygen
+DOXYGEN_DOT_EXECUTABLE:FILEPATH=/usr/bin/dot
+
+//Doxygen documentation generation tool (http://www.doxygen.org)
+DOXYGEN_EXECUTABLE:FILEPATH=/usr/bin/doxygen
+
+//Enables cluster BLAS library
+ENABLE_BLACS:BOOL=OFF
+
+//Enables BLAS Fortran95 API
+ENABLE_BLAS95:BOOL=OFF
+
+//Enables cluster DFT library
+ENABLE_CDFT:BOOL=OFF
+
+//Enables cluster PARDISO functionality
+ENABLE_CPARDISO:BOOL=OFF
+
+//Enables LAPACK Fortran95 API
+ENABLE_LAPACK95:BOOL=OFF
+
+//Enables OpenMP Offload functionality
+ENABLE_OMP_OFFLOAD:BOOL=OFF
+
+//Enables cluster LAPACK library
+ENABLE_SCALAPACK:BOOL=OFF
+
+//Path to a program.
+GITCOMMAND:FILEPATH=/usr/bin/git
+
+//Git command line client
+GIT_EXECUTABLE:FILEPATH=/usr/bin/git
+
+//Use Abseil and RE2. Requires Abseil and RE2 to be separately
+// added to the build.
+GTEST_HAS_ABSL:BOOL=OFF
+
 //HDF5 C Wrapper compiler.  Used only to detect HDF5 compile flags.
 HDF5_C_COMPILER_EXECUTABLE:FILEPATH=/usr/bin/h5cc
 
@@ -229,8 +389,128 @@ HDF5_DIFF_EXECUTABLE:FILEPATH=HDF5_DIFF_EXECUTABLE-NOTFOUND
 //The directory containing a CMake configuration file for HDF5.
 HDF5_DIR:PATH=HDF5_DIR-NOTFOUND
 
+//Path to a program.
+HGCOMMAND:FILEPATH=/usr/bin/hg
+
+//Enable documentation building
+HIGHFIVE_BUILD_DOCS:BOOL=ON
+
+//Compile examples
+HIGHFIVE_EXAMPLES:BOOL=ON
+
+//Enable bounds check for STL.
+HIGHFIVE_GLIBCXX_ASSERTIONS:BOOL=OFF
+
+//Enable additional friend declarations. Certain compiler require
+// this On, others Off.
+HIGHFIVE_HAS_FRIEND_DECLARATIONS:BOOL=OFF
+
+//Enable Parallel HDF5 support
+HIGHFIVE_PARALLEL_HDF5:BOOL=OFF
+
+//Enable a group of sanitizers, requires compiler support. Supported:
+// 'address' and 'undefined'.
+HIGHFIVE_SANITIZER:STRING=OFF
+
+//Enable unit tests (requires Catch2 to be present)
+HIGHFIVE_UNIT_TESTS:STRING=AUTO
+
+//Enable Boost Support
+HIGHFIVE_USE_BOOST:BOOL=ON
+
+//Enable Eigen testing
+HIGHFIVE_USE_EIGEN:BOOL=OFF
+
+//Enable half-precision floats
+HIGHFIVE_USE_HALF_FLOAT:BOOL=OFF
+
+//End applications by default use detected dependencies here
+HIGHFIVE_USE_INSTALL_DEPS:BOOL=OFF
+
+//Enable OpenCV testing
+HIGHFIVE_USE_OPENCV:BOOL=OFF
+
+//Enable xtensor testing
+HIGHFIVE_USE_XTENSOR:BOOL=OFF
+
+//Set logging level to verbose.
+HIGHFIVE_VERBOSE:BOOL=OFF
+
+//Value Computed by CMake
+HighFive_BINARY_DIR:STATIC=/home/usrg/jehun/fly_to_learn/build/external/rl_tools/external/highfive
+
+//Value Computed by CMake
+HighFive_SOURCE_DIR:STATIC=/home/usrg/jehun/fly_to_learn/external/rl_tools/external/highfive
+
+//Enable installation of googletest. (Projects embedding googletest
+// may want to turn this OFF.)
+INSTALL_GTEST:BOOL=OFF
+
+//Build the unit tests when BUILD_TESTING is enabled.
+JSON_BuildTests:BOOL=OFF
+
+//Enable CI build targets.
+JSON_CI:BOOL=OFF
+
+//Use extended diagnostic messages.
+JSON_Diagnostics:BOOL=OFF
+
+//Disable default integer enum serialization.
+JSON_DisableEnumSerialization:BOOL=OFF
+
+//Place use-defined string literals in the global namespace.
+JSON_GlobalUDLs:BOOL=ON
+
+//Enable implicit conversions.
+JSON_ImplicitConversions:BOOL=ON
+
+//Enable legacy discarded value comparison.
+JSON_LegacyDiscardedValueComparison:BOOL=OFF
+
+//Use non-amalgamated version of the library.
+JSON_MultipleHeaders:BOOL=ON
+
+//Include as system headers (skip for clang-tidy).
+JSON_SystemInclude:BOOL=OFF
+
 //Enable tests
 LEARNING_TO_FLY_IN_SECONDS_ENABLE_TESTS:BOOL=OFF
+
+//Command to build the project
+MAKECOMMAND:STRING=/usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
+
+//Path to the memory checking command, used for memory error detection.
+MEMORYCHECK_COMMAND:FILEPATH=MEMORYCHECK_COMMAND-NOTFOUND
+
+//File that contains suppressions for the memory checker
+MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
+
+//Choose MKL_ARCH options are: ia32;intel64
+MKL_ARCH:STRING=intel64
+
+//The directory containing a CMake configuration file for MKL.
+MKL_DIR:PATH=/usr/local/lib/cmake/mkl-2023.1.0
+
+//Path to a file.
+MKL_H:PATH=/opt/intel/oneapi/mkl/2023.1.0/include
+
+//Choose MKL_INTERFACE_FULL options are: intel_ilp64;intel_lp64
+MKL_INTERFACE_FULL:STRING=intel_ilp64
+
+//Choose MKL_LINK options are: static;dynamic;sdl
+MKL_LINK:STRING=dynamic
+
+//Choose MKL_MPI options are: intelmpi;openmpi;mpich;mpich2
+MKL_MPI:STRING=intelmpi
+
+//Choose MKL_THREADING options are: sequential;intel_thread;tbb_thread;gnu_thread
+MKL_THREADING:STRING=intel_thread
+
+//Path to a library.
+OMP_LIBRARY:FILEPATH=/opt/intel/oneapi/compiler/latest/linux/compiler/lib/intel64_lin/libiomp5.so
+
+//Path to a program.
+P4COMMAND:FILEPATH=P4COMMAND-NOTFOUND
 
 //Path to a file.
 Protobuf_INCLUDE_DIR:PATH=/usr/include
@@ -256,6 +536,117 @@ Protobuf_PROTOC_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotoc.so
 //Path to a library.
 Protobuf_PROTOC_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotoc.so
 
+//Enable the Accelerate gemm library, only available on Apple CPUs
+RL_TOOLS_BACKEND_ENABLE_ACCELERATE:BOOL=OFF
+
+//Enable Nvidia CUDA
+RL_TOOLS_BACKEND_ENABLE_CUDA:BOOL=OFF
+
+//Enable the MKL gemm library, only available on Intel CPUs
+RL_TOOLS_BACKEND_ENABLE_MKL:BOOL=ON
+
+//Use "Release" to e.g. build fat binaries with code for all CUDA
+// architectures (not just for the GPU found in the machine used
+// to build it)
+RL_TOOLS_BUILD_TYPE:BOOL=OFF
+
+//Additional compiler flags
+RL_TOOLS_COMPILER_FLAGS:BOOL=OFF
+
+//Disable CPU specific optimizations (e.g. for building portable
+// Docker containers)
+RL_TOOLS_DISABLE_CPU_SPECIFIC_OPTIMIZATIONS:BOOL=ON
+
+//OFF
+RL_TOOLS_DOWNLOAD_GTEST:BOOL=OFF
+
+//Enable (possibly unsafe) fast math operations
+RL_TOOLS_ENABLE_FAST_MATH:BOOL=OFF
+
+//Enable the GTK UI library
+RL_TOOLS_ENABLE_GTK:BOOL=OFF
+
+//Enable the libattopng library to log images to TensorBoard
+RL_TOOLS_ENABLE_LIBATTOPNG:BOOL=OFF
+
+//Enable link-time optimization
+RL_TOOLS_ENABLE_LTO:BOOL=OFF
+
+//Disable default targets
+RL_TOOLS_ENABLE_TARGETS:BOOL=OFF
+
+//Use HighFive from conan (don't use the submodule from /external)
+RL_TOOLS_HDF5_HIGHFIVE_FROM_CONAN:BOOL=OFF
+
+//Including redistributables from the redistributable submodule
+RL_TOOLS_INSTALL_INCLUDE_REDISTRIBUTABLES:BOOL=OFF
+
+//Enable MuJoCo
+RL_TOOLS_RL_ENVIRONMENTS_ENABLE_MUJOCO:BOOL=OFF
+
+//Multirotor UI
+RL_TOOLS_TESTS_RL_ENVIRONMENTS_MULTIROTOR_UI_ENABLE:BOOL=OFF
+
+//Local dev
+RL_TOOLS_TEST_LOCAL:BOOL=OFF
+
+//Visual Evaluation
+RL_TOOLS_TEST_RL_ALGORITHMS_TD3_FULL_TRAINING_EVALUATE_VISUALLY:BOOL=OFF
+
+//Visual Evaluation
+RL_TOOLS_TEST_RL_ALGORITHMS_TD3_FULL_TRAINING_OUTPUT_PLOTS:BOOL=OFF
+
+//Visual Evaluation
+RL_TOOLS_TEST_RL_ALGORITHMS_TD3_SECOND_STAGE_EVALUATE_VISUALLY:BOOL=OFF
+
+//Visual Evaluation
+RL_TOOLS_TEST_RL_ALGORITHMS_TD3_SECOND_STAGE_OUTPUT_PLOTS:BOOL=OFF
+
+//Visual Evaluation
+RL_TOOLS_TEST_RL_ENVIRONMENTS_PENDULUM_EVALUATE_VISUALLY:BOOL=OFF
+
+//Value Computed by CMake
+RLtools_BINARY_DIR:STATIC=/home/usrg/jehun/fly_to_learn/build/external/rl_tools
+
+//Value Computed by CMake
+RLtools_SOURCE_DIR:STATIC=/home/usrg/jehun/fly_to_learn/external/rl_tools
+
+//Name of the computer/site where compile is being run
+SITE:STRING=usrg
+
+//Path to the SLURM sbatch executable
+SLURM_SBATCH_COMMAND:FILEPATH=SLURM_SBATCH_COMMAND-NOTFOUND
+
+//Path to the SLURM srun executable
+SLURM_SRUN_COMMAND:FILEPATH=SLURM_SRUN_COMMAND-NOTFOUND
+
+//Path to a program.
+SVNCOMMAND:FILEPATH=/usr/bin/svn
+
+//Enable Boost Support
+USE_BOOST:BOOL=ON
+
+//Enable Eigen testing
+USE_EIGEN:BOOL=OFF
+
+//Enable OpenCV testing
+USE_OPENCV:BOOL=OFF
+
+//Enable xtensor testing
+USE_XTENSOR:BOOL=OFF
+
+//Path to a program.
+_Python_EXECUTABLE:FILEPATH=/usr/bin/python3.8
+
+//The directory containing a CMake configuration file for boost_filesystem.
+boost_filesystem_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.71.0
+
+//The directory containing a CMake configuration file for boost_headers.
+boost_headers_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.71.0
+
+//The directory containing a CMake configuration file for boost_system.
+boost_system_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_system-1.71.0
+
 //Value Computed by CMake
 fly_to_learn_BINARY_DIR:STATIC=/home/usrg/jehun/fly_to_learn/build
 
@@ -263,16 +654,92 @@ fly_to_learn_BINARY_DIR:STATIC=/home/usrg/jehun/fly_to_learn/build
 fly_to_learn_SOURCE_DIR:STATIC=/home/usrg/jehun/fly_to_learn
 
 //Value Computed by CMake
+googletest-distribution_BINARY_DIR:STATIC=/home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/lib/googletest
+
+//Value Computed by CMake
+googletest-distribution_SOURCE_DIR:STATIC=/home/usrg/jehun/fly_to_learn/external/rl_tools/tests/lib/googletest
+
+//Value Computed by CMake
+gtest_BINARY_DIR:STATIC=/home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/lib/googletest/googletest
+
+//Value Computed by CMake
+gtest_SOURCE_DIR:STATIC=/home/usrg/jehun/fly_to_learn/external/rl_tools/tests/lib/googletest/googletest
+
+//Build gtest's sample programs.
+gtest_build_samples:BOOL=OFF
+
+//Build all of gtest's own tests.
+gtest_build_tests:BOOL=OFF
+
+//Disable uses of pthreads in gtest.
+gtest_disable_pthreads:BOOL=OFF
+
+//Use shared (DLL) run-time lib even when Google Test is built
+// as static lib.
+gtest_force_shared_crt:BOOL=OFF
+
+//Build gtest with internal symbols hidden in shared libraries.
+gtest_hide_internal_symbols:BOOL=OFF
+
+//Dependencies for the target
+gtest_main_LIB_DEPENDS:STATIC=general;gtest;
+
+//Value Computed by CMake
 learning_to_fly_BINARY_DIR:STATIC=/home/usrg/jehun/fly_to_learn/build
 
 //Value Computed by CMake
 learning_to_fly_SOURCE_DIR:STATIC=/home/usrg/jehun/fly_to_learn
+
+//Path to a library.
+mkl_core_file:FILEPATH=/opt/intel/oneapi/mkl/2023.1.0/lib/intel64/libmkl_core.so
+
+//Path to a library.
+mkl_intel_ilp64_file:FILEPATH=/opt/intel/oneapi/mkl/2023.1.0/lib/intel64/libmkl_intel_ilp64.so
+
+//Path to a library.
+mkl_intel_thread_file:FILEPATH=/opt/intel/oneapi/mkl/2023.1.0/lib/intel64/libmkl_intel_thread.so
+
+//Value Computed by CMake
+nlohmann_json_BINARY_DIR:STATIC=/home/usrg/jehun/fly_to_learn/build/external/rl_tools/external/json
+
+//Value Computed by CMake
+nlohmann_json_SOURCE_DIR:STATIC=/home/usrg/jehun/fly_to_learn/external/rl_tools/external/json
+
+//Value Computed by CMake
+rl_tools_random_arm_BINARY_DIR:STATIC=/home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/random
+
+//Value Computed by CMake
+rl_tools_random_arm_SOURCE_DIR:STATIC=/home/usrg/jehun/fly_to_learn/external/rl_tools/tests/src/random
+
+//Value Computed by CMake
+tensorboard_logger_BINARY_DIR:STATIC=/home/usrg/jehun/fly_to_learn/build/external/rl_tools/external/tensorboard
+
+//Value Computed by CMake
+tensorboard_logger_SOURCE_DIR:STATIC=/home/usrg/jehun/fly_to_learn/external/rl_tools/external/tensorboard
 
 
 ########################
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: BZRCOMMAND
+BZRCOMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_INCLUDE_DIR
+Boost_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_LIBRARY_DIR_DEBUG
+Boost_LIBRARY_DIR_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_LIBRARY_DIR_RELEASE
+Boost_LIBRARY_DIR_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SERIALIZATION_LIBRARY_DEBUG
+Boost_SERIALIZATION_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SERIALIZATION_LIBRARY_RELEASE
+Boost_SERIALIZATION_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_DEBUG
+Boost_SYSTEM_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_RELEASE
+Boost_SYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -289,6 +756,8 @@ CMAKE_CACHE_PATCH_VERSION:INTERNAL=3
 CMAKE_COMMAND:INTERNAL=/usr/bin/cmake
 //Path to cpack program executable.
 CMAKE_CPACK_COMMAND:INTERNAL=/usr/bin/cpack
+//ADVANCED property for variable: CMAKE_CTEST_COMMAND
+CMAKE_CTEST_COMMAND-ADVANCED:INTERNAL=1
 //Path to ctest program executable.
 CMAKE_CTEST_COMMAND:INTERNAL=/usr/bin/ctest
 //ADVANCED property for variable: CMAKE_CXX_COMPILER
@@ -360,8 +829,40 @@ CMAKE_HAVE_PTHREAD_H:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/home/usrg/jehun/fly_to_learn
+//ADVANCED property for variable: CMAKE_INSTALL_BINDIR
+CMAKE_INSTALL_BINDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_DATADIR
+CMAKE_INSTALL_DATADIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_DATAROOTDIR
+CMAKE_INSTALL_DATAROOTDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_DOCDIR
+CMAKE_INSTALL_DOCDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_INCLUDEDIR
+CMAKE_INSTALL_INCLUDEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_INFODIR
+CMAKE_INSTALL_INFODIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_LIBDIR
+CMAKE_INSTALL_LIBDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_LIBEXECDIR
+CMAKE_INSTALL_LIBEXECDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_LOCALEDIR
+CMAKE_INSTALL_LOCALEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_LOCALSTATEDIR
+CMAKE_INSTALL_LOCALSTATEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_MANDIR
+CMAKE_INSTALL_MANDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_OLDINCLUDEDIR
+CMAKE_INSTALL_OLDINCLUDEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_RUNSTATEDIR
+CMAKE_INSTALL_RUNSTATEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_SBINDIR
+CMAKE_INSTALL_SBINDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_SHAREDSTATEDIR
+CMAKE_INSTALL_SHAREDSTATEDIR-ADVANCED:INTERNAL=1
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_SYSCONFDIR
+CMAKE_INSTALL_SYSCONFDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER
 CMAKE_LINKER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS
@@ -377,7 +878,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=34
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -420,10 +921,44 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: COVERAGE_COMMAND
+COVERAGE_COMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: COVERAGE_EXTRA_FLAGS
+COVERAGE_EXTRA_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CTEST_SUBMIT_RETRY_COUNT
+CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CTEST_SUBMIT_RETRY_DELAY
+CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CVSCOMMAND
+CVSCOMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CVS_UPDATE_OPTIONS
+CVS_UPDATE_OPTIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DART_TESTING_TIMEOUT
+DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DOXYGEN_DOT_EXECUTABLE
+DOXYGEN_DOT_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DOXYGEN_EXECUTABLE
+DOXYGEN_EXECUTABLE-ADVANCED:INTERNAL=1
+//Details about finding Boost
+FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake][cfound components: system filesystem ][v1.71.0()]
+//Details about finding Doxygen
+FIND_PACKAGE_MESSAGE_DETAILS_Doxygen:INTERNAL=[/usr/bin/doxygen][cfound components: doxygen dot ][v1.8.17()]
+//Details about finding Git
+FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/usr/bin/git][v2.25.1()]
 //Details about finding HDF5
 FIND_PACKAGE_MESSAGE_DETAILS_HDF5:INTERNAL=[/usr/lib/x86_64-linux-gnu/hdf5/serial/libhdf5.so;/usr/lib/x86_64-linux-gnu/libpthread.so;/usr/lib/x86_64-linux-gnu/libsz.so;/usr/lib/x86_64-linux-gnu/libz.so;/usr/lib/x86_64-linux-gnu/libdl.so;/usr/lib/x86_64-linux-gnu/libm.so][c ][v1.10.4()]
+//Details about finding MKL
+FIND_PACKAGE_MESSAGE_DETAILS_MKL:INTERNAL=[/opt/intel/oneapi/compiler/latest/linux/compiler/lib/intel64_lin/libiomp5.so][/opt/intel/oneapi/compiler/latest/linux/compiler/lib/intel64_lin/libiomp5.so][v()]
 //Details about finding Protobuf
 FIND_PACKAGE_MESSAGE_DETAILS_Protobuf:INTERNAL=[/usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread][/usr/include][v3.6.1()]
+//Details about finding Python
+FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/usr/bin/python3.8][cfound components: Interpreter ][v3.8.10()]
+//Details about finding Threads
+FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//ADVANCED property for variable: GITCOMMAND
+GITCOMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GIT_EXECUTABLE
+GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: HDF5_C_COMPILER_EXECUTABLE
 HDF5_C_COMPILER_EXECUTABLE-ADVANCED:INTERNAL=1
 //Result of TRY_COMPILE
@@ -432,6 +967,25 @@ HDF5_C_COMPILER_NO_INTERROGATE:INTERNAL=FALSE
 HDF5_DIFF_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: HDF5_DIR
 HDF5_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: HGCOMMAND
+HGCOMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: HIGHFIVE_HAS_FRIEND_DECLARATIONS
+HIGHFIVE_HAS_FRIEND_DECLARATIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: HIGHFIVE_SANITIZER
+HIGHFIVE_SANITIZER-ADVANCED:INTERNAL=1
+//STRINGS property for variable: HIGHFIVE_UNIT_TESTS
+HIGHFIVE_UNIT_TESTS-STRINGS:INTERNAL=AUTO;ON;OFF
+//ADVANCED property for variable: HIGHFIVE_USE_INSTALL_DEPS
+HIGHFIVE_USE_INSTALL_DEPS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MAKECOMMAND
+MAKECOMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MEMORYCHECK_COMMAND
+MEMORYCHECK_COMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MEMORYCHECK_SUPPRESSIONS_FILE
+MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
+NLOHMANN_JSON_CONFIG_INSTALL_DIR:INTERNAL=share/cmake/nlohmann_json
+//ADVANCED property for variable: P4COMMAND
+P4COMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Protobuf_INCLUDE_DIR
 Protobuf_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Protobuf_LIBRARY_DEBUG
@@ -448,4 +1002,54 @@ Protobuf_PROTOC_EXECUTABLE-ADVANCED:INTERNAL=1
 Protobuf_PROTOC_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Protobuf_PROTOC_LIBRARY_RELEASE
 Protobuf_PROTOC_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SITE
+SITE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SLURM_SBATCH_COMMAND
+SLURM_SBATCH_COMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SLURM_SRUN_COMMAND
+SLURM_SRUN_COMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SVNCOMMAND
+SVNCOMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: USE_BOOST
+USE_BOOST-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: USE_EIGEN
+USE_EIGEN-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: USE_XTENSOR
+USE_XTENSOR-ADVANCED:INTERNAL=1
+//Components requested for this build tree.
+_Boost_COMPONENTS_SEARCHED:INTERNAL=serialization;system
+//Last used Boost_INCLUDE_DIR value.
+_Boost_INCLUDE_DIR_LAST:INTERNAL=/usr/include
+//Last used Boost_LIBRARY_DIR_DEBUG value.
+_Boost_LIBRARY_DIR_DEBUG_LAST:INTERNAL=/usr/lib/x86_64-linux-gnu
+//Last used Boost_LIBRARY_DIR_RELEASE value.
+_Boost_LIBRARY_DIR_RELEASE_LAST:INTERNAL=/usr/lib/x86_64-linux-gnu
+//Last used Boost_NAMESPACE value.
+_Boost_NAMESPACE_LAST:INTERNAL=boost
+//Last used Boost_USE_MULTITHREADED value.
+_Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
+//CMAKE_INSTALL_PREFIX during last run
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
+//ADVANCED property for variable: _Python_EXECUTABLE
+_Python_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: _Python_INTERPRETER_SIGNATURE
+_Python_INTERPRETER_SIGNATURE-ADVANCED:INTERNAL=1
+_Python_INTERPRETER_SIGNATURE:INTERNAL=60fbcba4d3ec42cb22d9b25de2c7c03a
+//ADVANCED property for variable: boost_filesystem_DIR
+boost_filesystem_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_headers_DIR
+boost_headers_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_system_DIR
+boost_system_DIR-ADVANCED:INTERNAL=1
+cmake_package_name:INTERNAL=GTest
+//ADVANCED property for variable: gtest_build_samples
+gtest_build_samples-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: gtest_build_tests
+gtest_build_tests-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: gtest_disable_pthreads
+gtest_disable_pthreads-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: gtest_force_shared_crt
+gtest_force_shared_crt-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: gtest_hide_internal_symbols
+gtest_hide_internal_symbols-ADVANCED:INTERNAL=1
 

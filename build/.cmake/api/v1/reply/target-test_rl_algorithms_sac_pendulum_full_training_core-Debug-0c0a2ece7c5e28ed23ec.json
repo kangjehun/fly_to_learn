@@ -1,0 +1,179 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "external/rl_tools/tests/src/rl/algorithms/sac/cpu/test_rl_algorithms_sac_pendulum_full_training_core"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"target_compile_definitions"
+		],
+		"files" : 
+		[
+			"external/rl_tools/tests/src/rl/algorithms/sac/cpu/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 4,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 8,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 15,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 16,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 17,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g  "
+				},
+				{
+					"fragment" : "-std=gnu++17"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "RL_TOOLS_BACKEND_DISABLE_BLAS"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "RL_TOOLS_DISABLE_HDF5"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "RL_TOOLS_DISABLE_TENSORBOARD"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "RL_TOOLS_TESTS_DATA_PATH=/home/usrg/jehun/fly_to_learn/external/rl_tools/tests/data"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "/home/usrg/jehun/fly_to_learn/external/rl_tools/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/home/usrg/jehun/fly_to_learn/external/rl_tools/tests/lib/googletest/googletest/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/home/usrg/jehun/fly_to_learn/external/rl_tools/tests/lib/googletest/googletest"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "gtest_main::@d5718b7f04b376097d2a"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "gtest::@d5718b7f04b376097d2a"
+		}
+	],
+	"id" : "test_rl_algorithms_sac_pendulum_full_training_core::@faa3d87e8818cba06cb9",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "../../../../../../../../lib/libgtest_main.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../../../../../../../../lib/libgtest.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "test_rl_algorithms_sac_pendulum_full_training_core",
+	"nameOnDisk" : "test_rl_algorithms_sac_pendulum_full_training_core",
+	"paths" : 
+	{
+		"build" : "external/rl_tools/tests/src/rl/algorithms/sac/cpu",
+		"source" : "external/rl_tools/tests/src/rl/algorithms/sac/cpu"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/rl_tools/tests/src/rl/algorithms/sac/cpu/test.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

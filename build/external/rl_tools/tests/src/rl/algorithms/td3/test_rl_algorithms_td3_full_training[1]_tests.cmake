@@ -1,0 +1,3 @@
+add_test( RL_TOOLS_RL_ALGORITHMS_TD3_FULL_TRAINING.TEST_FULL_TRAINING /home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/rl/algorithms/td3/test_rl_algorithms_td3_full_training [==[--gtest_filter=RL_TOOLS_RL_ALGORITHMS_TD3_FULL_TRAINING.TEST_FULL_TRAINING]==] --gtest_also_run_disabled_tests)
+set_tests_properties( RL_TOOLS_RL_ALGORITHMS_TD3_FULL_TRAINING.TEST_FULL_TRAINING PROPERTIES WORKING_DIRECTORY /home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/rl/algorithms/td3)
+set( test_rl_algorithms_td3_full_training_TESTS RL_TOOLS_RL_ALGORITHMS_TD3_FULL_TRAINING.TEST_FULL_TRAINING)

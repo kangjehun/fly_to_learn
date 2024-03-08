@@ -1,0 +1,5 @@
+add_test( RL_TOOLS_NN_ARM.TEST_MLP_EVALUATE /home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/nn/test_nn_arm [==[--gtest_filter=RL_TOOLS_NN_ARM.TEST_MLP_EVALUATE]==] --gtest_also_run_disabled_tests)
+set_tests_properties( RL_TOOLS_NN_ARM.TEST_MLP_EVALUATE PROPERTIES WORKING_DIRECTORY /home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/nn)
+add_test( RL_TOOLS_NN_ARM.TEST_MLP_FORWARD /home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/nn/test_nn_arm [==[--gtest_filter=RL_TOOLS_NN_ARM.TEST_MLP_FORWARD]==] --gtest_also_run_disabled_tests)
+set_tests_properties( RL_TOOLS_NN_ARM.TEST_MLP_FORWARD PROPERTIES WORKING_DIRECTORY /home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/nn)
+set( test_nn_arm_TESTS RL_TOOLS_NN_ARM.TEST_MLP_EVALUATE RL_TOOLS_NN_ARM.TEST_MLP_FORWARD)

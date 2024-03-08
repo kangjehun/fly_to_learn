@@ -1,0 +1,5 @@
+if(EXISTS "/home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/logging/logging_tensorboard[1]_tests.cmake")
+  include("/home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/logging/logging_tensorboard[1]_tests.cmake")
+else()
+  add_test(logging_tensorboard_NOT_BUILT logging_tensorboard_NOT_BUILT)
+endif()
