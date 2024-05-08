@@ -1,0 +1,7 @@
+add_test( RL_TOOLS_CONTAINER_PERSIST_CODE_STORE.TEST /home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/test_container_persist_code_store [==[--gtest_filter=RL_TOOLS_CONTAINER_PERSIST_CODE_STORE.TEST]==] --gtest_also_run_disabled_tests)
+set_tests_properties( RL_TOOLS_CONTAINER_PERSIST_CODE_STORE.TEST PROPERTIES WORKING_DIRECTORY /home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests)
+add_test( RL_TOOLS_CONTAINER_PERSIST_CODE_STORE.TEST_DENSE_LAYER /home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/test_container_persist_code_store [==[--gtest_filter=RL_TOOLS_CONTAINER_PERSIST_CODE_STORE.TEST_DENSE_LAYER]==] --gtest_also_run_disabled_tests)
+set_tests_properties( RL_TOOLS_CONTAINER_PERSIST_CODE_STORE.TEST_DENSE_LAYER PROPERTIES WORKING_DIRECTORY /home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests)
+add_test( RL_TOOLS_CONTAINER_PERSIST_CODE_STORE.TEST_MLP /home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/test_container_persist_code_store [==[--gtest_filter=RL_TOOLS_CONTAINER_PERSIST_CODE_STORE.TEST_MLP]==] --gtest_also_run_disabled_tests)
+set_tests_properties( RL_TOOLS_CONTAINER_PERSIST_CODE_STORE.TEST_MLP PROPERTIES WORKING_DIRECTORY /home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests)
+set( test_container_persist_code_store_TESTS RL_TOOLS_CONTAINER_PERSIST_CODE_STORE.TEST RL_TOOLS_CONTAINER_PERSIST_CODE_STORE.TEST_DENSE_LAYER RL_TOOLS_CONTAINER_PERSIST_CODE_STORE.TEST_MLP)

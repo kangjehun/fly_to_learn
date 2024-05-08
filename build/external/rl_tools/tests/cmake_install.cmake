@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -39,6 +39,41 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/cmake_install.cmake")
+  include("/home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/random/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/nn/layers/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/nn_models/sequential/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/nn_models/mlp/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/rl/environments/car/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/rl/environments/acrobot/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/logging/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/math/cmake_install.cmake")
 endif()
 

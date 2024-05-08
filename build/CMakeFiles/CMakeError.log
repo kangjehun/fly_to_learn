@@ -1,16 +1,21 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/usrg/jehun/fly_to_learn/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/home/usrg/.vscode/extensions/powertech.powercpp-23.2.24/thirdparty/bin/ninja cmTC_d5ab8 && [1/2] Building C object CMakeFiles/cmTC_d5ab8.dir/src.c.o
-[2/2] Linking C executable cmTC_d5ab8
-FAILED: cmTC_d5ab8 
-: && /usr/bin/clang -DCMAKE_HAVE_LIBC_PTHREAD   CMakeFiles/cmTC_d5ab8.dir/src.c.o  -o cmTC_d5ab8   && :
-/usr/bin/ld: CMakeFiles/cmTC_d5ab8.dir/src.c.o: in function `main':
-src.c:(.text+0x35): undefined reference to `pthread_create'
-/usr/bin/ld: src.c:(.text+0x41): undefined reference to `pthread_detach'
-/usr/bin/ld: src.c:(.text+0x53): undefined reference to `pthread_join'
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-ninja: build stopped: subcommand failed.
+Run Build Command(s):/usr/bin/make cmTC_43a9a/fast && /usr/bin/make -f CMakeFiles/cmTC_43a9a.dir/build.make CMakeFiles/cmTC_43a9a.dir/build
+make[1]: Entering directory '/home/usrg/jehun/fly_to_learn/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_43a9a.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_43a9a.dir/src.c.o   -c /home/usrg/jehun/fly_to_learn/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_43a9a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_43a9a.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_43a9a.dir/src.c.o  -o cmTC_43a9a 
+/usr/bin/ld: CMakeFiles/cmTC_43a9a.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_43a9a.dir/build.make:87: cmTC_43a9a] Error 1
+make[1]: Leaving directory '/home/usrg/jehun/fly_to_learn/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_43a9a/fast] Error 2
 
 
 Source file was:
@@ -36,13 +41,37 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/usrg/jehun/fly_to_learn/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/home/usrg/.vscode/extensions/powertech.powercpp-23.2.24/thirdparty/bin/ninja cmTC_43ed4 && [1/2] Building C object CMakeFiles/cmTC_43ed4.dir/CheckFunctionExists.c.o
-[2/2] Linking C executable cmTC_43ed4
-FAILED: cmTC_43ed4 
-: && /usr/bin/clang -DCHECK_FUNCTION_EXISTS=pthread_create   CMakeFiles/cmTC_43ed4.dir/CheckFunctionExists.c.o  -o cmTC_43ed4  -lpthreads && :
+Run Build Command(s):/usr/bin/make cmTC_15350/fast && /usr/bin/make -f CMakeFiles/cmTC_15350.dir/build.make CMakeFiles/cmTC_15350.dir/build
+make[1]: Entering directory '/home/usrg/jehun/fly_to_learn/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_15350.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_15350.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_15350
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_15350.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_15350.dir/CheckFunctionExists.c.o  -o cmTC_15350  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-ninja: build stopped: subcommand failed.
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_15350.dir/build.make:87: cmTC_15350] Error 1
+make[1]: Leaving directory '/home/usrg/jehun/fly_to_learn/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_15350/fast] Error 2
+
+
+
+Determining if the function sgemm_ exists failed with the following output:
+Change Dir: /home/usrg/jehun/fly_to_learn/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3f426/fast && /usr/bin/make -f CMakeFiles/cmTC_3f426.dir/build.make CMakeFiles/cmTC_3f426.dir/build
+make[1]: Entering directory '/home/usrg/jehun/fly_to_learn/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3f426.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_   -o CMakeFiles/cmTC_3f426.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3f426
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3f426.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=sgemm_    CMakeFiles/cmTC_3f426.dir/CheckFunctionExists.c.o  -o cmTC_3f426 
+/usr/bin/ld: CMakeFiles/cmTC_3f426.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `sgemm_'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_3f426.dir/build.make:87: cmTC_3f426] Error 1
+make[1]: Leaving directory '/home/usrg/jehun/fly_to_learn/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_3f426/fast] Error 2
 
 
 

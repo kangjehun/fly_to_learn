@@ -33,7 +33,7 @@ target_include_directories(fly_to_learn INTERFACE include)
 
 set(RL_TOOLS_ENABLE_TESTS ON)
 add_subdirectory(external/rl_tools)
-# add_subdirectory(src)
+add_subdirectory(src)
 
 # option(LEARNING_TO_FLY_IN_SECONDS_ENABLE_TESTS "Enable tests" OFF)
 

@@ -1,5 +1,0 @@
-if(EXISTS "/home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/nn/test_nn_models_sequential[1]_tests.cmake")
-  include("/home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/src/nn/test_nn_models_sequential[1]_tests.cmake")
-else()
-  add_test(test_nn_models_sequential_NOT_BUILT test_nn_models_sequential_NOT_BUILT)
-endif()

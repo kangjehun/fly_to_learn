@@ -1,0 +1,5 @@
+if(EXISTS "/home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/test_rl_algorithms_ppo[1]_tests.cmake")
+  include("/home/usrg/jehun/fly_to_learn/build/external/rl_tools/tests/test_rl_algorithms_ppo[1]_tests.cmake")
+else()
+  add_test(test_rl_algorithms_ppo_NOT_BUILT test_rl_algorithms_ppo_NOT_BUILT)
+endif()

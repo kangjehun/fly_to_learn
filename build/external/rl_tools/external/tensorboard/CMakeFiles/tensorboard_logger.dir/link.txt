@@ -1,0 +1,2 @@
+"/usr/bin/gcc-ar-9" cr libtensorboard_logger.a  CMakeFiles/tensorboard_logger.dir/src/crc.cc.o CMakeFiles/tensorboard_logger.dir/src/tensorboard_logger.cc.o CMakeFiles/tensorboard_logger.dir/event.pb.cc.o CMakeFiles/tensorboard_logger.dir/projector_config.pb.cc.o CMakeFiles/tensorboard_logger.dir/resource_handle.pb.cc.o CMakeFiles/tensorboard_logger.dir/summary.pb.cc.o CMakeFiles/tensorboard_logger.dir/tensor.pb.cc.o CMakeFiles/tensorboard_logger.dir/tensor_shape.pb.cc.o CMakeFiles/tensorboard_logger.dir/types.pb.cc.o
+"/usr/bin/gcc-ranlib-9" libtensorboard_logger.a
